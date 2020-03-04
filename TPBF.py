@@ -68,7 +68,7 @@ def ex():
 try:
     passlist = open(sys.argv[1], 'r').read().splitlines()
 except:
-    print "Usage:\npython TelegramPasscodeBruteForce.py passlist.txt"
+    print "Usage:\npython TPBF.py passlist.txt"
     ex()
 def tryed(data):
     c = str(datetime.now())[:19]+"\n"
@@ -120,5 +120,5 @@ if path.exists("Telegram.exe") == True:
     tkot()
     bruteforce()
 else:
-    print "Please copy this script to the Telegram.exe Directory"
+    print "Please copy this script to the 'Telegram.exe' location"
 
