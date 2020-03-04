@@ -2,7 +2,7 @@
 
 ## Be sure to read:
 - This script is for Python 2.
-- Copy the script to 'Telegram.exe' path.
+- Copy the script to 'Telegram.exe' location.
 - It is advisable to open the telegram before executing the script and execute the script in 'CMD'.
 - Don't click anywhere until the end of the operation.
 - You can change the sleep times depending on how fast the program runs on your system
